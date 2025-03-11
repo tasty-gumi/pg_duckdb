@@ -13,7 +13,6 @@ Oid DuckdbUnresolvedTypeOid();
 Oid DuckdbJsonOid();
 Oid DuckdbTableAmOid();
 bool IsMotherDuckEnabled();
-bool IsMotherDuckEnabledAnywhere();
 Oid MotherDuckPostgresUser();
 Oid IsDuckdbTable(Form_pg_class relation);
 Oid IsDuckdbTable(Relation relation);

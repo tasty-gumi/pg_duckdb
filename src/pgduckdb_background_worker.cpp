@@ -323,7 +323,7 @@ Will start the background worker if:
 */
 void
 StartBackgroundWorkerIfNeeded(void) {
-	if (!pgduckdb::IsMotherDuckEnabledAnywhere()) {
+	if (!pgduckdb::IsMotherDuckEnabled()) {
 		elog(DEBUG3, "pg_duckdb background worker not started because MotherDuck is not enabled");
 		return;
 	}

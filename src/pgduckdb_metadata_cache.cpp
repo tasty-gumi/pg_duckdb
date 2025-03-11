@@ -324,15 +324,10 @@ IsMotherDuckTable(Relation relation) {
 
 bool
 IsMotherDuckEnabled() {
-	return IsMotherDuckEnabledAnywhere();
-}
-
-bool
-IsMotherDuckEnabledAnywhere() {
 	if (duckdb_motherduck_enabled == MotherDuckEnabled::MOTHERDUCK_ON)
-		return true;
+		return true; // either forced on
 	if (duckdb_motherduck_enabled == MotherDuckEnabled::MOTHERDUCK_AUTO)
-		return duckdb_motherduck_token[0] != '\0';
+		return duckdb_motherduck_token[0] != '\0'; // or auto, then needs token
 	return false;
 }
 
